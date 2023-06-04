@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Contact Form 05</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('#selectTransportMode').change(function() {
+				var selectedValue = $(this).val();
+
+				$('.transport-info').slideUp(); // Masquer tous les divs
+
+				// Afficher le div sélectionné
+				if (selectedValue === "En train") {
+					$('#trainInfo').slideDown();
+				} else if (selectedValue === "En avion") {
+					$('#planeInfo').slideDown();
+				} else if (selectedValue === "En bus") {
+					$('#busInfo').slideDown();
+				} else if (selectedValue === "En voiture") {
+					$('#carInfo').slideDown();
+				}
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			$('#selectAnimal').change(function() {
+				var selectedValue = $(this).val();
+
+				$('.animal-info').slideUp(); // Masquer tous les divs
+
+				// Afficher le div sélectionné
+				 if (selectedValue === "Chien") {
+					$('#Chien').slideDown();
+				} else if (selectedValue === "Chat") {
+					$('#Chat').slideDown();
+				} 
+			});
+		});
+	</script>
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Préparons ensemble votre séjour</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-lg-6">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h4>VOTRE ARRIVÉE CHEZ NOUS</h4>
+									<h6>Nos chambres sont disponibles à partir de 15h, afin de faciliter votre séjour, nous serons heureux  de vous proposer notre service de bagagerie.</h6>
+									<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group align-items-start">
+													<label for=""> Motif du séjour</label>
+													<select name="select" class="select" placeholder="Motif du séjour" >
+															<option class="form-control"  value="">Affaire </option>
+															<option class="form-control"  value="">Loisir </option>
+													</select>
+												</div>
+											
+												<div class="form-group align-items-start">
+													<label for=""> Heure d'arrivée </label>
+													<select name="select" class="select" placeholder="Motif du séjour" >
+															<option class="form-control"  value="">Avant 9:00 </option>
+															<option class="form-control"  value="">10:00  </option>
+															<option class="form-control"  value="">11:00 </option>
+															<option class="form-control"  value="">12:00 </option>
+															<option class="form-control"  value="">13:00 </option>
+															<option class="form-control"  value="">14:00 </option>
+															<option class="form-control"  value="">15:00 </option>
+															<option class="form-control"  value="">16:00 </option>
+															<option class="form-control"  value="">17:00 </option>
+															<option class="form-control"  value="">18:00 </option>
+															<option class="form-control"  value="">19:00  </option>
+															<option class="form-control"  value="">20:00 </option>
+															<option class="form-control"  value="">21:00 </option>
+															<option class="form-control"  value="">22:00 </option>
+															<option class="form-control"  value="">23:00 </option>
+															<option class="form-control"  value="">00:00 </option>
+															<option class="form-control"  value="">Après 01:00 </option>
+													</select>
+												</div>
+												<div class="form-group align-items-start">
+													<label for=""> Souhaitez-vous un early check-in (chambre disponible à 11h au lieu de 15h sous réserve de disponibilité) - Supplément 50€</label>
+													<div class="mydict">
+														<div>
+															<label>
+																<input type="radio" name="radio" >
+																<span>Oui</span>
+															</label>
+															<label>
+																<input type="radio" name="radio">
+																<span>Non</span>
+															</label>
+															
+														</div>
+													</div>
+												</div>
+												<div class="form-group align-items-start">
+													<label for=""> Souhaitez-vous un late check-out (Départ possible jusqu’à 15h au lieu de 12h) – Supplément 50€</label>
+													<div class="mydict">
+														<div>
+															<label>
+																<input type="radio" name="radio2" >
+																<span>Oui</span>
+															</label>
+															<label>
+																<input type="radio" name="radio2">
+																<span>Non</span>
+															</label>
+															
+														</div>
+													</div>
+												</div>
+												<div class="form-group align-items-start">
+													<label for=""> Souhaitez-vous réserver un petit déjeuner ?</label>
+													<div class="mydict">
+														<div>
+															<label>
+																<input type="radio" name="radio3" >
+																<span>Buffet(14€)</span>
+															</label>
+															<label>
+																<input type="radio" name="radio3">
+																<span>Express(7€)</span>
+															</label>
+															<label>
+																<input type="radio" name="radio3">
+																<span>Non</span>
+															</label>
+															
+														</div>
+													</div>
+												</div>
+												<div class="form-group align-items-start">
+													<label for="selectTransportMode"> Pourriez-vous nous préciser votre mode de transport pour que nous puissions faciliter votre arrivée ?</label>
+													<select name="select" class="select" id="selectTransportMode">
+														<option class="form-control" >Veuillez selectionner un moyen de transport</option>
+
+														<option class="form-control" value="En train">En train</option>
+														<option class="form-control" value="En avion">En avion</option>
+														<option class="form-control" value="En bus">En bus</option>
+														<option class="form-control" value="En voiture">En voiture</option>
+													</select>
+													
+												</div>
+			
+												<div class="transport-info" id="trainInfo" style="display: none;">
+													<p> Montparnasse à 20 mètres</p>
+
+													<p>Gare de Lyon : Bus 91 - 20 minutes</p>
+														
+													<p>Gare d'Austerlitz : Bus 91 - 15 minutes</p>
+														
+													<p>Gare de l'Est : Ligne 4 - 20 minutes</p>
+														
+													<p>Gare du Nord : Ligne 4 - 20 minutes </p>
+
+													<p> <h5>Besoin d'un chauffeur ? </h5>
+														<a href="https://www.kegroomanddriver.com"> <!-- Insert your link here -->
+															<img  src="images\karine.png" alt="">
+														</a>
+													</p>
+										
+												</div>
+												<div class="transport-info" id="planeInfo" style="display: none;">
+													<p> <h4>Besoin d'un chauffeur ? </h4>
+														<a href="https://www.kegroomanddriver.com"> <!-- Insert your link here -->
+															<img  src="images\karine.png" alt="">
+														</a>
+													</p>
+												</div>
+												<div class="transport-info" id="busInfo" style="display: none;">
+													<h5>Ligne 91/92/94/95/96/28/58/88
+
+														- Sortie Montparnasse</h5>
+												</div>
+												<div class="transport-info" id="carInfo" style="display: none;">
+													<div class="col-md-4">
+														<div class="dbox w-100 d-flex align-items-start">
+													<div class="text">
+													<p><span>Adresse:</span> 51 Avenue du Maine <br>75014 Paris</p>
+
+												  </div>
+												  <p>
+													<a href="https://www.google.com/maps/place/Hôtel+de+Paris+Montparnasse/@48.8401768,2.3220974,15z/data=!4m9!3m8!1s0x47e671cb157ccb53:0xefdc48e4656ebd39!5m2!4m1!1i2!8m2!3d48.8401768!4d2.3220974!16s%2Fg%2F1tm87r86?entry=ttu"> <!-- Insert your link here -->
+														<img class="spaceImage" src="images\plan.png" alt="">
+													</a>
+												</p>
+											  </div>
+													</div>
+												</div>
+												
+												<div class="form-group align-items-start">
+													<label for="">Avez-vous besoin de services particuliers ?</label>
+													<select name="select" class="select" placeholder="Motif du séjour"  >
+														
+															<option class="form-control"  value="">Non </option>
+															<option class="form-control"  value="">Adaptateur international </option>
+															<option class="form-control"  value="">Fer à repasser </option>
+															<option class="form-control"  value="">Bagagerie à l'arrivée</option>
+															<option class="form-control"  value="">Bagagerie au départ </option>
+														
+													</select>
+												</div>
+												<div class="form-group align-items-start">
+													<label for=""> Préférence literie?</label>
+													<select name="select" class="select" placeholder="Motif du séjour"  >
+															<option class="form-control"  value="">1 grand lit </option>
+															<option class="form-control"  value="">2 lits simples(+25€) </option>
+													</select>
+												</div>
+												<div class="form-group align-items-start">
+													<label for=""> Préférence de chambre? (en fonction des disponibilités pouvant engendrer un surcout en fonction de votre réservation)</label>
+													<select name="select" class="select" placeholder="Motif du séjour"  >
+															<option class="form-control"  value="">Etages superieurs  </option>
+															<option class="form-control"  value="">Etages inferieurs  </option>
+															<option class="form-control"  value="">Une chambre avec baignoire</option>
+															<option class="form-control"  value="">Une chambre avec douche</option>
+															<option class="form-control"  value="">Pas d'escalier / marche </option>
+															<option class="form-control"  value="">Une chambre avec un grand dressing </option>
+													</select>
+												</div>
+
+								
+
+						<div class="form-group align-items-start">
+							<label for=""> </label>
+							<div class="expandable-content">
+								<a href="#" class="expandable-trigger"><h6>Souhaitez-vous un kit VIP ?   – Supplément 20€ ▼ </h6></a>
+								<div class="expandable-panel" style="display: none;">
+									<br>
+
+									<div class="card">
+										<img src="images\19.png" alt="">
+									</div>	
+									<br>
+							
+								</div>
+							  </div>
+							<div class="mydict">
+								<div>
+									<label>
+										<input type="radio" name="radio2" >
+										<span>Oui</span>
+									</label>
+									<label>
+										<input type="radio" name="radio2">
+										<span>Non</span>
+									</label>
+									
+								</div>
+							</div>
+						</div>
+						<div class="form-group align-items-start">
+							<label for=""> </label>
+							<div class="expandable-content">
+								<a href="#" class="expandable-trigger"><h6>Souhaitez-vous un kit anniversaire ?   – Supplément 35€ ▼ </h6></a>
+								<div class="expandable-panel" style="display: none;">
+									<br>
+
+									<div class="card">
+										<img src="images\15.png" alt="">
+									</div>	
+									<br>
+							
+								</div>
+							  </div>
+							<div class="mydict">
+								<div>
+									<label>
+										<input type="radio" name="radio2" >
+										<span>Oui</span>
+									</label>
+									<label>
+										<input type="radio" name="radio2">
+										<span>Non</span>
+									</label>
+									
+								</div>
+							</div>
+						</div>
+
+												<div class="form-group align-items-start">
+													<label for=""> </label>
+													<div class="expandable-content">
+														<a href="#" class="expandable-trigger"><h6>Souhaitez-vous un kit romantique ?   – Supplément 35€ ▼ </h6></a>
+														
+														<div class="expandable-panel" style="display: none;">
+															<br>
+															<div class="card">
+																<img src="images\5.png" alt="">
+															</div>		
+															<br>
+												
+														</div>
+													  </div>
+													<div class="mydict">
+														<div>
+															<label>
+																<input type="radio" name="radio2" >
+																<span>Oui</span>
+															</label>
+															<label>
+																<input type="radio" name="radio2">
+																<span>Non</span>
+															</label>
+															
+														</div>
+													</div>
+												</div>
+												<div class="form-group align-items-start">	
+													<label for=""> </label>
+													<div class="expandable-content">
+														<a href="#" class="expandable-trigger"><h6>Souhaitez-vous un kit bébé ?   – Supplément 25€ ▼ </h6></a>
+														<div class="expandable-panel" style="display: none;">
+															<br>
+
+															<div class="card">
+																<img src="images\13.png" alt="">
+															</div>	
+															<br>
+													
+														</div>
+													  </div>
+													<div class="mydict">
+														<div>
+															<label>
+																<input type="radio" name="radio2" >
+																<span>Oui</span>
+															</label>
+															<label>
+																<input type="radio" name="radio2">
+																<span>Non</span>
+															</label>
+															
+														</div>
+													</div>
+												</div>
+						
+												<div class="form-group align-items-start">
+													<label for=""> </label>
+													<div class="expandable-content">
+														<a href="#" class="expandable-trigger"><h6>Souhaitez-vous un kit voyage ?  – Supplément 7€ ▼ </h6></a>
+														<div class="expandable-panel" style="display: none;">
+															<br>
+
+															<div class="card">
+																<img src="images\1.png" alt="">
+															</div>	
+															<br>
+													
+														</div>
+													  </div>
+													<div class="mydict">
+														<div>
+															<label>
+																<input type="radio" name="radio2" >
+																<span>Oui</span>
+															</label>
+															<label>
+																<input type="radio" name="radio2">
+																<span>Non</span>
+															</label>
+															
+														</div>
+													</div>
+												</div>
+				
+												<div class="form-group align-items-start">
+													<label for="selectAnimal"> Avez vous un animal de compagnie ?</label>
+													<select name="select" class="select" id="selectAnimal">
+														<option class="form-control" >Non</option>
+														<option class="form-control" value="Chien">Chien</option>
+														<option class="form-control" value="Chat">Chat</option>
+						
+													</select>
+													
+												</div>
+			
+												<div class="animal-info" id="Chien" style="display: none;">
+													<div class="form-group align-items-start">
+														<label for=""> </label>
+														<div class="expandable-content">
+															<a href="#" class="expandable-trigger"><h6>Souhaitez-vous un kit chien ? – Supplément 5€  ▼ </h6></a>
+															<div class="expandable-panel" style="display: none;">
+																<br>
+						
+																<div class="card">
+																	<img src="images\7.png" alt="">
+						
+																</div>	
+																<br>
+														
+															</div>
+														  </div>
+														<div class="mydict">
+															<div>
+																<label>
+																	<input type="radio" name="radio2" >
+																	<span>Oui</span>
+																</label>
+																<label>
+																	<input type="radio" name="radio2">
+																	<span>Non</span>
+																</label>
+																
+															</div>
+														</div>
+													</div>
+													<div class="form-group align-items-start">
+														<label for=""> </label>
+														<div class="expandable-content">
+															<a href="#" class="expandable-trigger"><h6>Souhaitez-vous un kit bon toutou ?   – Supplément 7€  ▼ </h6></a>
+															<div class="expandable-panel" style="display: none;">
+																<br>
+						
+																<div class="card">
+																	<img src="images\10.png" alt="">
+						
+																</div>	
+																<br>
+														
+															</div>
+														  </div>
+														<div class="mydict">
+															<div>
+																<label>
+																	<input type="radio" name="radio2" >
+																	<span>Oui</span>
+																</label>
+																<label>
+																	<input type="radio" name="radio2">
+																	<span>Non</span>
+																</label>
+																
+															</div>
+														</div>
+													</div>
+										
+												</div>
+												<div class="animal-info" id="Chat" style="display: none;">
+													<div class="form-group align-items-start">
+														<label for=""> </label>
+														<div class="expandable-content">
+															<a href="#" class="expandable-trigger"><h6>Souhaitez-vous un kit chat ? – Supplément 5€  ▼ </h6></a>
+															<div class="expandable-panel" style="display: none;">
+																<br>
+						
+																<div class="card">
+																	<img src="images\7.png" alt="">
+						
+																</div>	
+																<br>
+														
+															</div>
+														  </div>
+														<div class="mydict">
+															<div>
+																<label>
+																	<input type="radio" name="radio2" >
+																	<span>Oui</span>
+																</label>
+																<label>
+																	<input type="radio" name="radio2">
+																	<span>Non</span>
+																</label>
+																
+															</div>
+														</div>
+													</div>
+										
+													<div class="form-group align-items-start">
+														<label for=""> </label>
+														<div class="expandable-content">
+															<a href="#" class="expandable-trigger"><h6>Souhaitez-vous un kit gentil minou ?   – Supplément 7€  ▼ </h6></a>
+															<div class="expandable-panel" style="display: none;">
+																<br>
+						
+																<div class="card">
+																	<img src="images\12.png" alt="">
+						
+																</div>	
+																<br>
+														
+															</div>
+														  </div>
+														<div class="mydict">
+															<div>
+																<label>
+																	<input type="radio" name="radio2" >
+																	<span>Oui</span>
+																</label>
+																<label>
+																	<input type="radio" name="radio2">
+																	<span>Non</span>
+																</label>
+																
+															</div>
+														</div>
+													</div>
+												</div>
+											
+								
+
+												  <script>
+													$(document).ready(function() {
+													  $('.expandable-trigger').click(function(e) {
+														e.preventDefault();
+														var content = $(this).next('.expandable-panel');
+														content.slideToggle(400, function () {
+														
+														});
+													  });
+													});
+												  </script>
+										
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Avez-vous une demande supplémentaire ? "></textarea>
+												</div>
+											</div>
+											
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Envoyer" class="btn btn-primary">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								
+									<h3>Contactez-nous</h3>
+									<div class="row mb-4">
+										<div class="col-md-4">
+											<div class="dbox w-100 d-flex align-items-start">
+						        		<div class="text">
+							            <p><span>Adresse:</span> 51 Avenue du Maine <br>75014 Paris</p>
+							          </div>
+						          </div>
+										</div>
+										<div class="col-md-4">
+											<div class="dbox w-100 d-flex align-items-start">
+						        		<div class="text">
+							            <p><span>Email:</span> <a href="mailto:info@yoursite.com">reservation@hotel-montparnasse.fr</a></p>
+							          </div>
+						          </div>
+										</div>
+										<div class="col-md-4">
+											<div class="dbox w-100 d-flex align-items-start">
+						        		<div class="text">
+							            <p><span>Telephone:</span> <a href="tel://1234567920">01 43 22 10 13 </a></p>
+							          </div>
+						          </div>
+										</div>
+									</div>
+									<div class="w-100 social-media mt-5">
+										<h3>Suivez nous !</h3>
+										<p>
+											Nous offrons un cocktail à nos nouveaux abonnés ! N'oubliez pas de noter votre compte sur les demandes supplémentaires ! 
+											</p>
+											<p>
+											<a href="https://www.facebook.com/hoteldeparismontparnasse3/">Facebook</a>
+											<a href="https://www.instagram.com/hotel_paris_montparnasse/">Instagram</a>
+											<a href="">LinkedIn</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 d-flex align-items-stretch">
+								<div class="info-wrap w-100 p-5 img" style="background-image: url(images/img.jpg);">
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	</body>
+</html>
+
+
+</body>
